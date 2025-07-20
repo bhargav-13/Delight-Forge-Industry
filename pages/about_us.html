@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>About Us - Delight Forge Industry</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, sans-serif;
+        background: #060010;
+        color: white;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1920px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      /* Header Section */
+      .header {
+        position: relative;
+        height: 414px;
+        background: #060010;
+        overflow: hidden;
+      }
+
+      .header-bg {
+        position: absolute;
+        width: 148%;
+        height: 278%;
+        left: -24%;
+        top: 0;
+        background: url("assets/about_us_bg.png") center/cover;
+        z-index: 0;
+      }
+
+      .nav-wrapper {
+        position: relative;
+        z-index: 10;
+        padding: 42px 6.8% 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        width: 227px;
+        height: 75px;
+        background: url("../assets/images/Screenshot 2025-06-18 103853.png")
+          center/contain no-repeat;
+      }
+
+      .nav-menu {
+        display: flex;
+        gap: 32px;
+        list-style: none;
+      }
+
+      .nav-menu li a {
+        color: white;
+        font-size: 24px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .nav-menu li a:hover {
+        color: #37b39c;
+      }
+
+      .hero-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        text-align: center;
+        font-family: "Syne", serif;
+        font-size: 56px;
+        font-weight: 700;
+        color: white;
+      }
+
+      /* Main Content Sections */
+      .section {
+        padding: 100px 6.8%;
+        background: #060010;
+      }
+
+      .section-title {
+        text-align: center;
+        font-family: "Syne", serif;
+        font-size: 56px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 64px;
+      }
+
+      /* Forging Trust Section */
+      .forging-section {
+        text-align: center;
+      }
+
+      .factory-image {
+        width: 100%;
+        max-width: 1660px;
+        height: auto;
+        border-radius: 10px;
+        border: 1px solid #d9d9d9;
+        margin: 0 auto 64px;
+        display: block;
+      }
+
+      .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+        gap: 32px;
+        justify-items: center;
+        margin-top: 64px;
+      }
+
+      .gallery-item {
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Capabilities Section */
+      .capabilities-section {
+        position: relative;
+      }
+
+      .capabilities-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 64px;
+      }
+
+      .capabilities-dot {
+        width: 69.55px;
+        height: 69.55px;
+        border-radius: 50%;
+        border: 21.64px solid white;
+      }
+
+      .capabilities-title {
+        font-size: 58.91px;
+        font-weight: 600;
+        color: white;
+      }
+
+      .capabilities-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+      }
+
+      .capabilities-image {
+        width: 100%;
+        height: auto;
+        /* border: 2.2px solid white; */
+        border-radius: 10px;
+      }
+
+      .capabilities-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .capabilities-list li {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        color: white;
+        margin-bottom: 24px;
+        position: relative;
+        padding-left: 40px;
+      }
+
+      .capabilities-list li:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #ffffff;
+        font-size: 30px;
+        top: -5px;
+      }
+
+      /* Industries Section */
+      .industries-section {
+        text-align: center;
+      }
+
+      .industries-image {
+        width: 100%;
+        height: auto;
+        margin: 64px 0;
+      }
+
+      .industries-list {
+        display: flex;
+        justify-content: center;
+        gap: 64px;
+        flex-wrap: wrap;
+      }
+
+      .industries-list span {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        color: white;
+      }
+
+      /* Vision Mission Section */
+      .vision-mission-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        margin-top: 64px;
+      }
+
+      .vision-mission-card {
+        border: 2px solid white;
+        padding: 40px;
+        text-align: center;
+      }
+
+      .vision-mission-card h3 {
+        font-family: "Syne", serif;
+        font-size: 56px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 32px;
+      }
+
+      .vision-mission-card p {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: 0.24px;
+        color: white;
+      }
+
+      /* Why Delight Forge Section */
+      .why-delight-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        margin-top: 64px;
+      }
+
+      .feature-card {
+        position: relative;
+        height: 427px;
+        border: 2px solid white;
+        border-radius: 15px;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 32px;
+      }
+
+      .feature-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.65),
+          rgba(0, 0, 0, 0.65)
+        );
+        z-index: 1;
+      }
+
+      .feature-card img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+
+      .feature-card h3 {
+        position: relative;
+        z-index: 2;
+        font-size: 32px;
+        font-weight: 600;
+        color: white;
+        text-align: center;
+        line-height: 1.2;
+      }
+
+      /* CTA Section */
+      .cta-section {
+        position: relative;
+        height: 560px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 6.8%;
+        overflow: hidden;
+      }
+
+      .cta-content {
+        max-width: 500px;
+      }
+
+      .cta-content h2 {
+        font-family: "Syne", serif;
+        font-size: 50px;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 24px;
+      }
+
+      .cta-content p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        color: white;
+        margin-bottom: 40px;
+      }
+
+      .cta-button {
+        background: #090920;
+        color: white;
+        font-size: 13.67px;
+        font-weight: 500;
+        padding: 12px 24px;
+        border-radius: 28px;
+        border: 1px solid #a968ff;
+        box-shadow: 16px -10px 14px -8px rgba(55, 179, 156, 0.7);
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background: #37b39c;
+        transform: translateY(-2px);
+      }
+
+      .cta-circles {
+        position: absolute;
+        right: 30%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      .circle {
+        border: 2px solid white;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .circle-1 {
+        width: 320px;
+        height: 320px;
+        opacity: 1;
+      }
+      .circle-2 {
+        width: 500px;
+        height: 500px;
+        opacity: 0.13;
+      }
+      .circle-3 {
+        width: 780px;
+        height: 780px;
+        opacity: 0.13;
+      }
+      .circle-4 {
+        width: 1060px;
+        height: 1060px;
+        opacity: 0.13;
+      }
+
+      .circle img {
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      /* Footer */
+      .footer {
+        background: #2b2e3a;
+        padding: 128px 200px 64px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 180px;
+        margin-bottom: 170px;
+      }
+
+      .footer-left h2 {
+        font-family: "Syne", serif;
+        font-size: 53.33px;
+        font-weight: 500;
+        line-height: 58.67px;
+        color: white;
+        margin-bottom: 32px;
+      }
+
+      .footer-left .subtitle {
+        font-size: 13.33px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.53px;
+        color: white;
+        opacity: 0.5;
+        margin-bottom: 32px;
+      }
+
+      .contact-info {
+        margin-top: 32px;
+      }
+
+      .contact-info p {
+        font-size: 18.67px;
+        font-weight: 400;
+        line-height: 26.13px;
+        color: white;
+        margin-bottom: 5px;
+      }
+
+      .footer-form {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+      }
+
+      .form-group {
+        position: relative;
+      }
+
+      .form-group input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1.33px solid white;
+        color: white;
+        font-size: 18.85px;
+        padding: 8px 0;
+        outline: none;
+      }
+
+      .form-group label {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        font-size: 13.33px;
+        font-weight: 500;
+        color: white;
+        opacity: 0.5;
+      }
+
+      .submit-btn {
+        background: #37b39c;
+        color: white;
+        font-size: 18.67px;
+        font-weight: 500;
+        padding: 18px 53px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        align-self: flex-start;
+        transition: background 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        background: #2d9a85;
+      }
+
+      .social-links a:hover {
+        background: #37b39c;
+      }
+
+      /* Contact Form Section */
+      .contact-form-section {
+        background-color: #2b2e3a;
+        padding: 40px;
+        position: relative;
+      }
+
+      .contact-form-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10rem;
+      }
+
+      .contact-info {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 68px;
+      }
+
+      .contact-header {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: rgba(255, 255, 255, 0.5);
+        text-transform: uppercase;
+      }
+
+      .contact-title {
+        font-size: 42px;
+        font-family: "Syne", serif;
+        font-weight: 500;
+        line-height: 1.1;
+        color: #ffffff;
+        width: 75%;
+        margin-top: 32px;
+      }
+
+      .contact-details {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .contact-description {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.3;
+        color: rgba(255, 255, 255, 0.5);
+        width: 62%;
+      }
+
+      .contact-info-list {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .contact-info-item {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.3;
+        color: #ffffff;
+      }
+
+      .contact-form {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .form-input {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.3;
+        color: white;
+        border: none;
+        border-bottom: 2px solid #a3a3a3;
+        outline: none;
+        padding: 8px 0;
+        background: transparent;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .form-label {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.3;
+        color: rgba(255, 255, 255, 0.25);
+      }
+
+      .form-line {
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 100%;
+      }
+
+      .submit-btn {
+        background-color: #37b29b;
+        color: #ffffff;
+        border: none;
+        border-radius: 4px;
+        padding: 18px 34px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: fit-content;
+        margin-top: 64px;
+      }
+
+      .submit-btn:hover {
+        background-color: #2a8a75;
+      }
+
+      /* Footer */
+      .footer {
+        background-color: #2b2e3a;
+        padding: 40px;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+      }
+
+      .footer-section {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .footer-title {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: #37b29b;
+        text-transform: uppercase;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .footer-link {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.3;
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-link:hover {
+        color: #37b29b;
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .footer-logo {
+        width: 56px;
+        height: 24px;
+      }
+
+      .footer-copyright {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.2;
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 20px;
+      }
+
+      .social-link {
+        width: 18px;
+        height: 18px;
+      }
+
+      .center-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1400px) {
+        .container {
+          max-width: 100%;
+        }
+
+        .section-title {
+          font-size: 48px;
+        }
+
+        .capabilities-title {
+          font-size: 48px;
+        }
+
+        .vision-mission-card h3 {
+          font-size: 48px;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        .nav-menu {
+          gap: 24px;
+        }
+
+        .nav-menu li a {
+          font-size: 20px;
+        }
+
+        .section-title {
+          font-size: 42px;
+        }
+
+        .capabilities-content {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        .capabilities-title {
+          font-size: 42px;
+        }
+
+        .why-delight-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .vision-mission-card h3 {
+          font-size: 42px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .nav-wrapper {
+          flex-direction: column;
+          gap: 32px;
+          padding: 32px 6.8%;
+        }
+
+        .header {
+          height: auto;
+          padding-bottom: 64px;
+        }
+
+        .hero-title {
+          position: static;
+          transform: none;
+          margin-top: 32px;
+          font-size: 48px;
+        }
+
+        .section {
+          padding: 64px 6.8%;
+        }
+
+        .section-title {
+          font-size: 36px;
+          margin-bottom: 48px;
+        }
+
+        .capabilities-header {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .capabilities-title {
+          font-size: 36px;
+        }
+
+        .industries-list {
+          gap: 32px;
+        }
+
+        .vision-mission-section {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
+
+        .vision-mission-card h3 {
+          font-size: 36px;
+        }
+
+        .vision-mission-card p {
+          font-size: 20px;
+        }
+
+        .why-delight-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .cta-section {
+          flex-direction: column;
+          height: auto;
+          padding: 64px 6.8%;
+          text-align: center;
+        }
+
+        .cta-circles {
+          transform: none;
+          margin-top: 32px;
+          right: 15%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-menu {
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .nav-menu li a {
+          font-size: 18px;
+        }
+
+        .hero-title {
+          font-size: 36px;
+        }
+
+        .section {
+          padding: 48px 5%;
+        }
+
+        .section-title {
+          font-size: 28px;
+          margin-bottom: 32px;
+        }
+
+        .capabilities-dot {
+          width: 50px;
+          height: 50px;
+          border-width: 15px;
+        }
+
+        .capabilities-title {
+          font-size: 28px;
+        }
+
+        .capabilities-list li {
+          font-size: 18px;
+          line-height: 28px;
+        }
+
+        .industries-list {
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .industries-list span {
+          font-size: 18px;
+        }
+
+        .vision-mission-card {
+          padding: 24px;
+        }
+
+        .vision-mission-card h3 {
+          font-size: 28px;
+          margin-bottom: 24px;
+        }
+
+        .vision-mission-card p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        .feature-card {
+          height: 320px;
+          padding: 24px;
+        }
+
+        .feature-card h3 {
+          font-size: 24px;
+        }
+
+        .cta-content h2 {
+          font-size: 36px;
+        }
+
+        .circle-1 {
+          width: 250px;
+          height: 250px;
+        }
+        .circle-2 {
+          width: 350px;
+          height: 350px;
+        }
+        .circle-3 {
+          width: 500px;
+          height: 500px;
+        }
+        .circle-4 {
+          width: 650px;
+          height: 650px;
+        }
+
+        .circle img {
+          width: 250px;
+          height: 250px;
+        }
+
+        .footer-content {
+          flex-direction: column;
+          gap: 40px;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          gap: 20px;
+          text-align: center;
+        }
+
+        .contact-form-content {
+          flex-direction: column;
+        }
+
+        .contact-info,
+        .contact-form {
+          width: 100%;
+        }
+
+        .contact-title {
+          width: 100%;
+        }
+
+        .contact-description {
+          width: 100%;
+        }
+
+        .cta-circles {
+          display: none;
+        }
+
+        .cta-content {
+          max-width: 800px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .footer {
+          padding: 40px 130px;
+        }
+        .contact-title {
+          font-size: 53px;
+          line-height: 58px;
+        }
+        .contact-form-section {
+          padding: 60px;
+        }
+        .footer {
+          padding: 60px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .contact-form-section {
+          padding: 60px 130px;
+        }
+        .footer {
+          padding: 60px 130px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-title {
+          font-size: 28px;
+        }
+
+        .section-title {
+          font-size: 24px;
+        }
+
+        .capabilities-title {
+          font-size: 24px;
+        }
+
+        .vision-mission-card h3 {
+          font-size: 24px;
+        }
+
+        .vision-mission-card p {
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        .feature-card h3 {
+          font-size: 20px;
+        }
+
+        .cta-content h2 {
+          font-size: 28px;
+        }
+        .image-gallery {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 16px;
+        }
+      }
+
+      /* Hamburger menu styling */
+      .menu-toggle {
+        display: none;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        z-index: 11;
+        position: absolute;
+        left: 60px;
+        top: 60px;
+      }
+
+      .menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        display: block;
+        border-radius: 2px;
+      }
+
+      /* Mobile Nav Styles */
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: flex;
+        }
+
+        .nav-menu {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: #060010;
+          flex-direction: column;
+          align-items: center;
+          display: none; /* hidden by default */
+          padding: 20px 0px;
+          gap: 32px;
+        }
+
+        .header {
+          display: contents;
+        }
+
+        .nav-menu.show {
+          display: flex;
+        }
+
+        .footer-content {
+          text-align: center;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="header-bg"></div>
+      <div class="container">
+        <nav class="nav-wrapper">
+          <div class="logo"></div>
+          <!-- Hamburger Menu Button -->
+          <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <ul class="nav-menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="about_us.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <h1 class="hero-title">About us</h1>
+      </div>
+    </header>
+
+    <!-- Forging Trust Section -->
+    <section class="section forging-section">
+      <div class="container">
+        <h2 class="section-title">Forging Not Just Metal, But Trust</h2>
+        <img
+          src="../assets/images/factory_building.png"
+          alt="Factory Building"
+          class="factory-image"
+        />
+        <div class="image-gallery">
+          <div class="gallery-item">
+            <img src="../assets/images/IOS_certified.png" alt="ISO Certified" />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../assets/images/machine_and_workers.png"
+              alt="Machine and Workers"
+            />
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/images/machine.png" alt="Machine" />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="../assets/images/controller_and_worker.png"
+              alt="Controller and Worker"
+            />
+          </div>
+          <div class="gallery-item">
+            <img src="../assets/images/monthly_steel.png" alt="Monthly Steel" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Capabilities Section -->
+    <section class="section capabilities-section">
+      <div class="container">
+        <div class="capabilities-header">
+          <div class="capabilities-dot"></div>
+          <h2 class="capabilities-title">Our Capabilities</h2>
+        </div>
+        <div class="capabilities-content">
+          <div class="capability-mask">
+            <img
+              src="../assets/images/our_capabilities.png"
+              alt="Our Capabilities"
+              class="capabilities-image"
+            />
+          </div>
+          <div>
+            <ul class="capabilities-list">
+              <li>Maximum Height: 90 mm</li>
+              <li>Weight Capacity: 0.500 kg to 15.000 kg</li>
+              <li>Outer Diameter Range: 100 mm to 300 mm</li>
+              <li>Monthly Production Capacity: 350 Metric Tons (MT)</li>
+              <li>Manufacturing Type: Fully In-House Production Setup</li>
+              <li>
+                Industries Served: Automotive, Agriculture, Railways, and
+                General Engineering
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries We Serve Section -->
+    <section class="section industries-section">
+      <div class="container">
+        <h2 class="section-title">Industries We Serve</h2>
+        <img
+          src="../assets/images/industries_we_serve.png"
+          alt="Industries We Serve"
+          class="industries-image"
+        />
+        <div class="industries-list">
+          <span>Automotive</span>
+          <span>Heavy Engineering</span>
+          <span>Agriculture Equipment</span>
+          <span>Railway & Transportation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Focused on the Future</h2>
+        <div class="vision-mission-section">
+          <div class="vision-mission-card">
+            <h3>Our Vision</h3>
+            <p>
+              At Delight Forge Industry, our vision is to be recognized as a
+              trusted global leader in precision forging. We aspire to deliver
+              excellence through innovation, reliability, and uncompromising
+              quality—empowering industries worldwide with components that shape
+              the future of engineering and manufacturing.
+            </p>
+          </div>
+          <div class="vision-mission-card">
+            <h3>Our Mission</h3>
+            <p>
+              Our mission is to manufacture and deliver high-quality closed die
+              forged components that meet the diverse needs of industries such
+              as forging, annealing, CNC. We are committed to precision,
+              performance, and customer satisfaction—driven by advanced
+              technology, skilled professionals, and a dedication to continuous
+              improvement. Through strong partnerships, ethical practices, and
+              timely solutions, we aim to forge not just metal—but lasting
+              trust.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Delight Forge Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Why Delight Forge?</h2>
+        <div class="why-delight-grid">
+          <div class="feature-card">
+            <img
+              src="../assets/images/DELIGHT ISO CERTIFICATE_why_delight_forge.png"
+              alt="ISO Certified"
+            />
+            <h3>ISO 9001:2015 Certified Processes</h3>
+          </div>
+          <div class="feature-card">
+            <img
+              src="../assets/images/machine_and_workers.png"
+              alt="Manufacturing"
+            />
+            <h3>End-to-End In-House Manufacturing</h3>
+          </div>
+          <div class="feature-card">
+            <img
+              src="../assets/images/annual_capacity.png"
+              alt="Annual Capacity"
+            />
+            <h3>1000+ Tons Annual Capacity</h3>
+          </div>
+          <div class="feature-card">
+            <img
+              src="../assets/images/customized_forging_solutions.png"
+              alt="Customized Solutions"
+            />
+            <h3>Customized Forging Solutions</h3>
+          </div>
+          <div class="feature-card">
+            <img
+              src="../assets/images/focus_on_timely_delivery.png"
+              alt="Timely Delivery"
+            />
+            <h3>Focus on Timely Delivery</h3>
+          </div>
+          <div class="feature-card">
+            <img src="../assets/images/commitment.png" alt="Commitment" />
+            <h3>Commitment to Long-Term Partnerships</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to work with us?</h2>
+          <p>
+            Get in touch with Delight Forge Industry for high-quality forged
+            components tailored to your industry.
+          </p>
+          <a href="#contact" class="cta-button">Contact us</a>
+        </div>
+        <div class="cta-circles">
+          <div class="circle circle-4"></div>
+          <div class="circle circle-3"></div>
+          <div class="circle circle-2"></div>
+          <div class="circle circle-1">
+            <img
+              src="../assets/images/img_omv_9297_320x320.png"
+              alt="Contact Image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form-section">
+      <div class="contact-form-content">
+        <div class="contact-info">
+          <div>
+            <p class="contact-header">Let's go</p>
+            <h2 class="contact-title">
+              Looking for high-quality forged components?
+            </h2>
+          </div>
+          <div class="contact-details">
+            <div
+              style="width: 12%; height: 1px; background-color: #37b29b"
+            ></div>
+            <p class="contact-description">
+              Or contact us in the convenient way for you
+            </p>
+            <div class="contact-info-list">
+              <p class="contact-info-item">delightautoforge@gmail.com</p>
+              <p class="contact-info-item">+91 9712377858</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <input
+            type="text"
+            class="form-input"
+            placeholder="Your name"
+            style="margin-bottom: 3rem"
+            onfocus="this.style.borderBottomColor='white'"
+          />
+          <input
+            type="text"
+            class="form-input"
+            placeholder="Your phone number"
+            onfocus="this.style.borderBottomColor='white'"
+          />
+          <button class="submit-btn">Send request</button>
+        </div>
+      </div>
+      <img
+        src="../assets/images/img_image.png"
+        alt="Contact Image"
+        style="
+          width: 150px;
+          height: 150px;
+          border-radius: 100px;
+          position: absolute;
+          bottom: 100px;
+          left: 100px;
+          mask-image: radial-gradient(
+            circle,
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 0) 20%
+          );
+          -webkit-mask-image: radial-gradient(
+            circle,
+            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 0) 100%
+          );
+        "
+      />
+      <img
+        src="../assets/images/img_mask_img.png"
+        alt="Contact Image"
+        style="width: 350px; position: absolute; top: 50px; bottom: 0; right: 0"
+      />
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="footer-title">Pages</h3>
+          <div class="footer-links">
+            <a href="home.html" class="footer-link">Home</a>
+            <a href="product.html" class="footer-link">Products</a>
+            <a href="contact.html" class="footer-link">Contact us</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title" style="color: rgba(255, 255, 255, 0.5)">
+            Information
+          </h3>
+          <div class="footer-links">
+            <a href="about_us.html" class="footer-link">About us</a>
+            <a href="#" class="footer-link">Why choose us</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="footer-title" style="color: rgba(255, 255, 255, 0.5)">
+            Contact us
+          </h3>
+          <div class="footer-links">
+            <a href="mailto:delightautoforge@gmail.com" class="footer-link"
+              >delightautoforge@gmail.com</a
+            >
+            <a href="tel:+919712377858" class="footer-link">+91 9712377858</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <img
+          src="../assets/images/img_vector.svg"
+          alt="Footer Logo"
+          class="footer-logo"
+          onclick="scrollToTop()"
+        />
+        <p class="footer-copyright">
+          Develop by Codelix IT Solutions Pvt. Ltd.
+        </p>
+        <div class="social-links">
+          <img
+            src="../assets/images/img_vector_white_a700.svg"
+            alt="Social"
+            class="social-link"
+          />
+          <img
+            src="../assets/images/img_vector_white_a700_18x18.svg"
+            alt="Social"
+            class="social-link"
+          />
+          <img
+            src="../assets/images/img_vector_white_a700_16x20.svg"
+            alt="Social"
+            class="social-link"
+          />
+        </div>
+      </div>
+    </footer>
+    <script>
+      function toggleMenu() {
+        const navMenu = document.querySelector(".nav-menu");
+        navMenu.classList.toggle("show");
+      }
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth", // adds smooth scrolling
+        });
+      }
+    </script>
+  </body>
+</html>
